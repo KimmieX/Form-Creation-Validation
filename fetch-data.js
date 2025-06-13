@@ -1,10 +1,10 @@
 async function fetchUser Data() {
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Define the API URL
     const dataContainer = document.getElementById('api-data');
 
     try {
-        const response = await fetch(apiUrl);
-        const users = await response.json();
+        const response = await fetch(apiUrl); // Fetch data from the API
+        const users = await response.json(); // Convert the response to JSON
 
         // Clear the loading message
         dataContainer.innerHTML = '';
