@@ -1,21 +1,28 @@
 async function fetchUser Data() {
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Declare the API URL
+    // Define the API URL
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    
+    // Select the data container element
     const dataContainer = document.getElementById('api-data');
 
     try {
-        const response = await fetch(apiUrl); // Fetch data from the API
-        const users = await response.json(); // Convert the response to JSON
+        // Fetch data using the API URL
+        const response = await fetch(apiUrl);
+        
+        // Convert the response to JSON
+        const users = await response.json();
 
         // Clear the loading message
         dataContainer.innerHTML = '';
 
-        // Create a list to display user names
+        // Create a <ul> element to hold the user list
         const userList = document.createElement('ul');
 
+        // Loop through the users array and create <li> elements
         users.forEach(user => {
             const listItem = document.createElement('li');
             listItem.textContent = user.name; // Set the text content to the user's name
-            userList.appendChild(listItem); // Append the list item to the user list
+            userList.appendChild(listItem); // Append the <li> to the user list
         });
 
         // Append the user list to the data container
@@ -29,4 +36,3 @@ async function fetchUser Data() {
 
 // Invoke fetchUser Data on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', fetchUser Data);
-
