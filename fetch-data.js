@@ -1,5 +1,5 @@
 async function fetchUser Data() {
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Define the API URL
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Declare the API URL
     const dataContainer = document.getElementById('api-data');
 
     try {
@@ -29,3 +29,4 @@ async function fetchUser Data() {
 
 // Invoke fetchUser Data on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', fetchUser Data);
+
